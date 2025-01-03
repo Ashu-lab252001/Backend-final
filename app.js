@@ -28,12 +28,7 @@ app.use('/scripts', express.static(path.join(__dirname, 'public/scripts'), {
 
 app.set('view engine', 'ejs');
 
-app.use(cors({
-  origin: 'https://frontend-final-one.vercel.app', // Updated: removed extra spaces
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-}));
+app.use(cors());
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
