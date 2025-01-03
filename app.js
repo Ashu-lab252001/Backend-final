@@ -29,7 +29,7 @@ app.use('/scripts', express.static(path.join(__dirname, 'public/scripts'), {
 app.set('view engine', 'ejs');
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Updated: removed extra spaces
+  origin: 'https://frontend-final-one.vercel.app/', // Updated: removed extra spaces
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
